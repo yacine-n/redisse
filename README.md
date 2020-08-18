@@ -1,4 +1,4 @@
-# Redisse
+#Redisse Modifié
 
 Redisse is a Redis-backed Ruby library for creating [Server-Sent
 Events](http://www.w3.org/TR/eventsource/), publishing them from your
@@ -129,12 +129,7 @@ In the traditional Rack app specs or tests, use `Redisse.test_mode!`:
 
     describe "SSE" do
       before do
-        Redisse.test_mode!
-      end
-
-      it "should send a Server-Sent Event" do
-        post '/publish', channel: 'global', message: 'Hello'
-        expect(Redisse.published.size).to be == 1
+        redisse.published.size).to be == 1
       end
     end
 
